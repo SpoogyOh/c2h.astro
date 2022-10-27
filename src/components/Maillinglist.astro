@@ -1,0 +1,60 @@
+---
+import MForm2 from "./mform2";
+import { Sprite } from "astro-icon";
+---
+
+<div class="mailing-tile">
+  <div>
+  <h1 id="waitinglist">Willst du deine Verträge überpüfen lassen?</h1>
+  <h2 class="my-8">
+    Dann trag dich ein und sei einer der ersten die unsere Softwarte benutzen
+    dürfen.
+  </h2>
+
+  <div class="flex flex-row justify-center gap-2">
+   
+    <div class="border-2 rounded-lg text-start basis-3/8">
+      <h3 class="p-4">Verträge für <br /> Menschen, <br /> nicht Juristen.</h3>
+    </div>
+    
+    <div class="basis-1/8 flex-col place-content-between hidden sm:flex">
+      <div class="border-2 rounded-lg flex flex-row">
+        <Sprite.Provider>
+          <Sprite name="material-symbols:arrow-forward" />
+          <Sprite name="material-symbols:arrow-forward" />
+          <Sprite name="material-symbols:arrow-forward" />
+        </Sprite.Provider>
+      </div>
+
+      <div class="border-2 rounded-lg flex flex-row">
+        <Sprite.Provider>
+          <Sprite name="material-symbols:arrow-forward" />
+          <Sprite name="material-symbols:arrow-forward" />
+          <Sprite name="material-symbols:arrow-forward" />
+        </Sprite.Provider>
+      </div>
+
+    </div>
+
+    <div class="grid border-2 rounded-lg  basis-1/2 place-items-center">
+      <div class="">
+        <MForm2 />
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+  .mailing-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  [astro-icon] {
+    color: rgb(100, 100, 255);
+    height: 3rem;
+    width: 4rem;
+  }
+</style>
