@@ -1,0 +1,80 @@
+---
+import { Image } from "@astrojs/image/components";
+---
+
+<div class="magic-tile">
+  <h1 class="">Wie funktioniert contract2human</h1>
+
+  <div>
+    <div class="flex flex-col md:flex-row">
+      <div class="basis-1/2 flex justify-center">
+        <img src="/monitor1.png" alt="" class="max-w-md" />
+      </div>
+      <div
+        class="flex flex-col bg-white rounded-lg basis-1/2 justify-center my-20 p-6"
+      >
+        <div>
+          <h2 class="text-start">Schick uns deinen Vertrag.</h2>
+          <h3 class="text-start">
+            Du kannst ihn hochladen. <br /> Oder auch einfach mit dem Smartphone
+            scannen.
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row">
+      <div
+        class="sm:flex flex-col bg-white rounded-lg basis-1/2 justify-center my-20 p-6 hidden "
+      >
+        <div>
+          <h2 class="text-end">Unsere KI analysiert den Vertrag.</h2>
+          <h3 class="text-end">
+            Natural Language Processing Technologie. <br /> Versteht komplexe Satzstrukturen.
+          </h3>
+        </div>
+      </div>
+
+      <div class="basis-1/2 flex justify-center">
+        <img src="/monitor2.png" alt="" class="max-w-md" />
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col bg-white rounded-lg basis-1/2 justify-center my-20 p-6 sm:hidden"
+    >
+      <div>
+        <h2 class="text-end">Unsere KI analysiert den Vertrag.</h2>
+        <h3 class="text-end">
+          Natural Language Processing Technologie. <br /> Versteht komplexe Satzstrukturen.
+        </h3>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row">
+      <div class="basis-1/2 flex justify-center">
+        <img src="/monitor3.png" alt="" class="max-w-md" />
+      </div>
+      <div
+        class="flex flex-col bg-white rounded-lg basis-1/2 justify-center my-20 p-6"
+      >
+        <div>
+          <h2 class="text-start">Ein Vertrag den jeder verstehen kann.</h2>
+          <h3 class="text-start">
+            Erläuterungen zu allen Begriffen. Fragwürdige Klauseln werden
+            markiert. <br /> Unser Algorithmus teilt dir mit wie sicher er sich bezüglich
+            jeder Klausel ist.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .magic-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>

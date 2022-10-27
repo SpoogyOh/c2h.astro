@@ -1,0 +1,48 @@
+---
+
+import MForm from "./mform.tsx";
+---
+
+<div class="hero-tile mt-44 h-1/2">
+  <h1 class="">
+    Wir übersetzen juristisch in <br />
+    eine menschliche Sprache.
+  </h1>
+  <div class="flex justify-center">
+    <p class="mt-6 max-w-prose">
+      Unsere KI-basierte Lösung analysiert einen Vertrag und verschafft unseren
+      Kunden einen Überblick über den Inhalt und alle relevanten rechtlichen
+      Risiken, und das in einer leicht verständlichen Sprache. So können unsere
+      Nutzer in ihrem Berufsleben die richtigen Entscheidungen treffen und
+      Verträge gegebenenfalls neu verhandeln.
+    </p>
+  </div>
+  <div class="justify-center mt-10">
+    <MForm client:load />
+  </div>
+  <a href="/#magic" aria-label="Go to next section" >
+    <svg
+      width="36"
+      height="114"
+      viewBox="0 0 36 114"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="mt-10"
+      ><path
+        d="M3 95.484L18 110.484L33 95.484M18 3V103V3Z"
+        stroke="#212E3C"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </a>
+</div>
+
+<style>
+  .hero-tile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+</style>
