@@ -12,7 +12,7 @@ export default function MForm2() {
 
   return (
     <div className="">
-      <form onSubmit={handleSubmit(onSubmit)} className="space-x-2">
+      <form onSubmit={handleSubmit(onSubmit)} className="sm:space-x-2 flex space-y-2 sm:space-y-0 flex-col sm:flex-row items-center">
         <input
           type="text"
           placeholder="E-Mail"
