@@ -3,8 +3,11 @@ import { Image } from "@astrojs/image/components";
 ---
 
 <div class="magic-tile overflow-hidden">
-  <h1 class="font-bold text-4xl sm:text-6xl tracking-wide mt-4 mb-4 mr-12">Wie funktioniert</h1>
-  <img src="/logo.png" class="align-middle ">
+  <h1 class="font-bold text-4xl sm:text-6xl tracking-wide mt-4 mb-4 mr-12 sm:mr-0">Wie funktioniert</h1>
+  <div class="flex align-bottom">
+  <img src="/logo.png" class="align-middle sm:max-w-md">
+  <h1 class="font-bold text-4xl sm:text-6xl tracking-wide mt-4 mb-4 mr-12 sm:mr-0 ">?</h1>
+</div>
 
   <div>
     <div class="flex flex-col sm:flex-row">
@@ -76,5 +79,6 @@ import { Image } from "@astrojs/image/components";
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
 </style>
