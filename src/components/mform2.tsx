@@ -12,7 +12,7 @@ export default function MForm2() {
 
   return (
     <div className="">
-      <form onSubmit={handleSubmit(onSubmit)} className="sm:space-x-2 flex space-y-2 sm:space-y-0 flex-col sm:flex-row items-center">
+      <form onSubmit={handleSubmit(onSubmit)} className="sm:space-x-2 flex space-y-4 sm:space-y-0 flex-col sm:flex-row items-center">
         <input
           type="text"
           placeholder="E-Mail"
@@ -22,7 +22,7 @@ export default function MForm2() {
 
         <button
           type="submit"
-          className=" rounded-lg bg-black text-white h-12 w-36"
+          className=" rounded-lg bg-[#43998e] text-white h-12 w-36"
         >
           Probiere es aus
         </button>
