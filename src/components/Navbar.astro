@@ -1,10 +1,15 @@
+---
+import {Icon} from "astro-icon"
+---
 
-
-<div class="border-2 rounded-lg sm:m-8 flex items-center justify-between">
+<div
+  class="bg-[#43998e] text-white rounded-lg sm:m-8 flex items-center justify-between"
+>
   <div>
-    <img src="/logo.png" class="w-24 m-4"> 
+    <img src="/logow.png" class="w-24 m-4" />
   </div>
-  <div class="hidden md:flex ">
+
+  <div class="hidden md:flex">
     <ul>
       <li class="space-x-6 mx-4">
         <a href="/#hero" class="">Home</a>
@@ -14,5 +19,11 @@
         <a href="/#footer" class="">Kontakt</a>
       </li>
     </ul>
+  </div>
+
+  <div class="sm:hidden mx-4">
+    <button class="flex">
+      <Icon name="feather:menu" width={35}></Icon>
+    </button>
   </div>
 </div>
