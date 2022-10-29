@@ -9,7 +9,9 @@ module.exports = {
 				"sans": ["Open Sans", ...defaultTheme.fontFamily.sans],
 			}
 		},
-		
+		colors: {
+			main: #43998e
+		}
 	},
 	plugins: [],
 }

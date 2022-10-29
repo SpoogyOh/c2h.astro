@@ -1,5 +1,6 @@
 ---
 import {Icon} from "astro-icon"
+import { MobileHeader } from "./header";
 ---
 
 <div
@@ -21,9 +22,7 @@ import {Icon} from "astro-icon"
     </ul>
   </div>
 
-  <div class="sm:hidden mx-4">
-    <button class="flex">
-      <Icon name="feather:menu" width={35}></Icon>
-    </button>
+  <div class="sm:hidden  ">
+    <MobileHeader client:load/>
   </div>
 </div>
