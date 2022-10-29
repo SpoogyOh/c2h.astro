@@ -20,14 +20,43 @@ export const MobileHeader = () => {
       <div className="p-4">
         <button onClick={handleNav}>BURGER</button>
       </div>
-      <div className={isOpen ? "fixed text-white left-0 h-full top-0 w-[70%] bg-[#43998e]" : "hidden"}>
+      <div
+        className={
+          isOpen
+            ? "fixed text-white left-0 h-full top-0 w-[70%] bg-[#43998e]"
+            : "hidden"
+        }
+      >
         <img src="/logow.png" className="w-48 mt-10 pl-8" />
         <ul className="p-4 pt-20 uppercase text-xl">
-          <li className="p-4 border-b border-gray-100">Home</li>
-          <li className="p-4 border-b border-gray-100">So funktoniert es</li>
-          <li className="p-4 border-b border-gray-100">Probier es aus</li>
-          <li className="p-4 border-b border-gray-100">Das Team</li>
-          <li className="p-4 border-b border-gray-100">Kontakt</li>
+          <li className="p-4 border-b border-gray-100">
+            <a onClick={handleNav} href="/#hero">
+              Home
+            </a>
+          </li>
+          <li className="p-4 border-b border-gray-100">
+            <a onClick={handleNav} href="/#magic">
+              Die App
+            </a>
+          </li>
+          <li className="p-4 border-b border-gray-100">
+            {" "}
+            <a onClick={handleNav} href="/#waitinglist">
+              Probier es aus
+            </a>
+          </li>
+          <li className="p-4 border-b border-gray-100">
+            {" "}
+            <a onClick={handleNav} href="/#team">
+              Das Team
+            </a>
+          </li>
+          <li className="p-4 border-b border-gray-100">
+            {" "}
+            <a onClick={handleNav} href="/#footer">
+              Kontakt
+            </a>
+          </li>
         </ul>
       </div>
     </div>
