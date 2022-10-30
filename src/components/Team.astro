@@ -14,7 +14,7 @@ const items = [
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
       "lorem ipsum lorem ipsum lorem ipusim loasfasfast lorem ipsum lorem ipusim loasfasfastwawvs lorem ipsum lorem ipusim loasfasfastwawvs",
-    foto: "/daniel.png",
+    foto: "/jan.png",
   },
   {
     name: "Daniel Opiola",
@@ -22,14 +22,14 @@ const items = [
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
       "lorem ipsum lorem ipsum lorem ipusim loasfasfast lorem ipsum lorem ipusim loasfasfastwawvs lorem ipsum lorem ipusim loasfasfastwawvs",
-    foto: "/daniel.png",
+    foto: "/morten.png",
   },
   
 ];
 ---
 
 <div class="team-tile">
-  <h1 id="team" class="font-bold text-4xl mt-28 sm:text-6xl tracking-wide">
+  <h1 id="team" class="font-bold text-4xl mt-20 sm:text-6xl tracking-wide">
     Das Team
   </h1>
 
@@ -40,7 +40,7 @@ const items = [
       items.map((item) => (
         <div class="flex flex-col text-start">
           <div class="w-24 h-24 mb-4">
-            <img src={item.foto} class="rounded-lg" />
+            <img src={item.foto} class="rounded-lg object-contain" />
           </div>
           <div class="">
             <p class="">{item.name}</p>
