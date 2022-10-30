@@ -1,8 +1,8 @@
 ---
-import { Image } from "@astrojs/image/components";
+
 ---
 
-<div id="magic" class="magic-tile overflow-hidden">
+<div id="magic" class="magic-tile overflow-hidden mt-14 sm:mt-24">
   <h1 class="font-bold text-4xl sm:text-6xl tracking-wide mt-4 mb-4">So funktioniert</h1>
   <div class="flex">
   <img src="/logo.png" class="align-middle sm:max-w-md px-4 sm:px-0">
@@ -11,11 +11,12 @@ import { Image } from "@astrojs/image/components";
   <div>
     <div class="flex flex-col sm:flex-row">
       <div class="basis-1/2 flex justify-center">
-        <img src="/monitor1.png" alt="" class="max-w-md" />
+        <img src="/monitor1.png" alt="" class="h-72 sm:h-96
+         sm:max-w-md" />
       </div>
 
       <div
-        class="flex flex-col bg-white rounded-lg basis-1/2 justify-center sm:my-20"
+        class="flex flex-col bg-white rounded-lg sm:basis-1/2 justify-center sm:my-20"
       >
         <div class="text-center">
           <h2 class="sm:text-start">Schick uns deinen Vertrag.</h2>
@@ -37,7 +38,7 @@ import { Image } from "@astrojs/image/components";
       </div>
 
       <div class="basis-1/2 flex justify-center">
-        <img src="/monitor2.png" alt="" class="max-w-md" />
+        <img src="/monitor2.png" alt="" class="max-w-md h-72 sm:h-96" />
       </div>
 
       <div
@@ -56,7 +57,7 @@ import { Image } from "@astrojs/image/components";
     <div>
       <div class="flex flex-col sm:flex-row">
         <div class="basis-1/2 flex justify-center">
-          <img src="/monitor3.png" alt="" class="max-w-md" />
+          <img src="/monitor3.png" alt="" class="max-w-md h-72 sm:h-96" />
         </div>
 
         <div
@@ -79,5 +80,17 @@ import { Image } from "@astrojs/image/components";
     flex-direction: column;
     align-items: center;
     
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.05rem;
+  }
+
+  h3 {
+    font-size: 1.0rem;
+    font-weight: 400;
+   
   }
 </style>
