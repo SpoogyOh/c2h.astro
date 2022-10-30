@@ -1,20 +1,20 @@
 ---
-import {Icon} from "astro-icon"
 import { MobileHeader } from "./header";
 ---
 
 <div
-  class="bg-[#43998e] text-white m-4 rounded-lg sm:m-8 flex items-center justify-between"
+  class=" text-black navbar justify-between w-full"
 >
   <div>
-    <img src="/logow.png" class="w-24 m-4" />
+    <img src="/logow.png" class="logowhite w-24 m-4 hidden"/>
+    <img src="/logo.png" class="logoblack w-24 m-4" />
   </div>
 
   <div class="hidden md:flex">
     <ul>
       <li class="space-x-6 mx-4">
         <a href="/#hero" class="hover:text-[#f7e07d]">Home</a>
-        <a href="/#magic" class="hover:text-[#f7e07d]">So funktoniert es</a>
+        <a href="/#magic" class="hover:text-[#f7e07d]">So funktonierts</a>
         <a href="/#waitinglist" class="hover:text-[#f7e07d]">Probier es aus</a>
         <a href="/#team" class="hover:text-[#f7e07d]">Das Team</a>
         <a href="/#footer" class="hover:text-[#f7e07d]">Kontakt</a>
@@ -23,6 +23,29 @@ import { MobileHeader } from "./header";
   </div>
 
   <div class="sm:hidden">
-    <MobileHeader client:load/>
+    <MobileHeader client:load />
   </div>
 </div>
+
+<style>
+  .navbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    top: 0; }
+</style>
+
+<script client:load>
+
+  const colorchange = () => {
+    if(window.scrollY >= 90) {
+      document.querySelector(".navbar").classList.add("bg-[#43998e]", "text-white");
+      document.querySelector(".navbar").classList.remove("text-black");
+      document.querySelector(".logowhite").classList.remove("hidden");
+      document.querySelector(".logoblack").classList.add("hidden");
+    }}
+
+    window.addEventListener("scroll", colorchange);
+
+</script>
