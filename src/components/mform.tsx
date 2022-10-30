@@ -11,10 +11,10 @@ export default function MForm() {
   console.log(errors);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="sm:space-x-2 flex space-y-2 sm:space-y-0 flex-col sm:flex-row items-center">
+    <form onSubmit={handleSubmit(onSubmit)} className="sm:space-x-2 flex space-y-4 sm:space-y-0 flex-col sm:flex-row items-center">
       <input
         type="text"
-        placeholder="E-Mail"
+        placeholder="Trage deine E-Mail ein."
         {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
         className="border-2 rounded-lg h-12 w-72 text-center"
       />
