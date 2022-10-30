@@ -1,18 +1,18 @@
 ---
-
 ---
 
-<div id="magic" class="magic-tile overflow-hidden mt-14 sm:mt-24">
-  <h1 class="font-bold text-4xl sm:text-6xl tracking-wide mt-4 mb-4">So funktioniert</h1>
+<div id="magic" class="magic-tile overflow-hidden mt-14 sm:mt-24 relative">
+  <h1 class="font-bold text-4xl sm:text-6xl tracking-wide mt-4 mb-4">
+    So funktioniert
+  </h1>
   <div class="flex">
-  <img src="/logo.png" class="align-middle sm:max-w-md px-4 sm:px-0">
-</div>
+    <img src="/logo.png" class="align-middle sm:max-w-md px-4 sm:px-0" />
+  </div>
 
-  <div>
-    <div class="flex flex-col sm:flex-row">
+  <div class="">
+    <div class="flex flex-col sm:flex-row hedden">
       <div class="basis-1/2 flex justify-center">
-        <img src="/monitor1.png" alt="" class="h-72 sm:h-96
-         sm:max-w-md" />
+        <img src="/monitor1.png" alt="" class="h-72 sm:h-96 sm:max-w-md" />
       </div>
 
       <div
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col sm:flex-row">
+    <div class="flex flex-col sm:flex-row hedden">
       <div
         class="sm:flex flex-col bg-white rounded-lg basis-1/2 justify-center sm:my-20 hidden"
       >
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="hedden">
       <div class="flex flex-col sm:flex-row">
         <div class="basis-1/2 flex justify-center">
           <img src="/monitor3.png" alt="" class="max-w-md h-72 sm:h-96" />
@@ -73,13 +73,11 @@
     </div>
   </div>
 </div>
-
 <style>
   .magic-tile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
 
   h2 {
@@ -89,8 +87,39 @@
   }
 
   h3 {
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: 400;
-   
+  }
+
+  .hedden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s
+  }
+
+  @media(prefers-reduced-motion)
+  {.hedden {
+    transition: none;
+  }}
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
   }
 </style>
+
+<script client:load>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hedden");
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
