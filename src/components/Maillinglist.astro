@@ -1,36 +1,51 @@
 ---
 import MForm2 from "./mform2";
+import {Icon} from "astro-icon"
 ---
 
-<div class="mailing-tile h-1/2 mt-28 overflow-hidden" id="waitinglist">
-  <h1 class="text-center font-bold text-4xl sm:text-6xl tracking-wide">Willst du deine Verträge <br class="hidden sm:flex">überpüfen lassen?</h1>
+<div class="mailing-tile mt-28 overflow-hidden" id="waitinglist">
+  <h1 class="text-center font-bold text-4xl sm:text-6xl tracking-wide">
+    Willst du deine Verträge <br class="hidden sm:flex" />überpüfen lassen?
+  </h1>
   <h2 class="my-8 text-center">
     Dann trag dich ein und sei einer der ersten die unsere Softwarte benutzen
     dürfen.
   </h2>
   <div>
     <div class="flex flex-col sm:flex-row justify-center gap-2">
-      <div class="border-2 rounded-lg text-start sm:basis-3/8">
-        <h3 class="p-4">
+      <div class="rounded-lg text-start sm:basis-3/8 bg-[#A9CEF4]">
+        <h3 class="p-4 text-[#36494E] hidden sm:flex">
           Verträge für <br /> Menschen, <br /> nicht Juristen.
-        </h3>
+        </h3> 
       </div>
 
       <div class="basis-1/8 flex-col place-content-between hidden sm:flex">
-        <div class="border-2 rounded-lg flex flex-row">
-          <a>a</a>
+        <div class=" rounded-lg flex flex-row space-x-2 bg-[#43998e] p-2">
+          <Icon name="arrow" class="h-10" />
+          <Icon name="arrow" class="h-10" />
+          <Icon name="arrow" class="h-10" />
         </div>
 
-        <div class="border-2 rounded-lg flex flex-row">
-          <a>a</a>
+        <div class=" rounded-lg flex flex-row space-x-2 p-2 bg-[#f7e07d]">
+          <Icon name="arrow2" class="h-10" />
+          <Icon name="arrow2" class="h-10" />
+          <Icon name="arrow2" class="h-10" />
         </div>
       </div>
 
-      <div class="grid border-2 rounded-lg sm:basis-1/2 place-items-center max-w-lg">
+      <div
+        class="grid border-2 rounded-lg sm:basis-1/2 place-items-center max-w-lg"
+      >
         <div class="my-8 sm:my-0 justify-center">
-          <MForm2 client:load/>
+          <MForm2 client:load />
         </div>
       </div>
+      <div class="rounded-lg text-center sm:hidden bg-[#A9CEF4]">
+        <h4 class="p-4 text-[#36494E]">
+          Verträge für Menschen, nicht Juristen.
+        </h4> 
+      </div>
+      
     </div>
   </div>
 </div>
@@ -39,6 +54,25 @@ import MForm2 from "./mform2";
   .mailing-tile {
     display: flex;
     flex-direction: column;
-  
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.05rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.05rem ;
+    margin-bottom: 0.05rem;
+  }
+
+  h4 {
+    font-size: 1.0rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem ;
+ 
   }
 </style>
