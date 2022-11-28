@@ -15,7 +15,7 @@ export default function MForm() {
       .post("https://eollu7uuvae8ai4.m.pipedream.net", data)
       .then((response) => {
         setSuccessMessage(
-          `Thanks for signing up! Check your inbox for updates 😊`
+          `Anmeldung erfolgreich. 😊`
         );
       })
       .catch((e) => console.error(e));
