@@ -22,6 +22,7 @@
     "@types/react-dom": "^18.0.8",
     "astro": "^1.6.0",
     "astro-icon": "^0.8.0",
+    "axios": "^1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.38.0",

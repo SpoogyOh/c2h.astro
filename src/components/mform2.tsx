@@ -1,32 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import { useForm } from "react-hook-form";
 
-export default function MForm2() {
+export default function MForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { isSubmitting },
   } = useForm();
-  const onSubmit = (data: any) => console.log(data);
-  console.log(errors);
+  const [successMessage, setSuccessMessage] = useState("");
+
+  function onSubmit(data) {
+    axios
+      .post("https://eollu7uuvae8ai4.m.pipedream.net", data)
+      .then((response) => {
+        setSuccessMessage(
+          `Thanks for signing up! Check your inbox for updates 😊`
+        );
+      })
+      .catch((e) => console.error(e));
+  }
 
   return (
-    <div className="">
-      <form onSubmit={handleSubmit(onSubmit)} className="sm:space-x-2 flex space-y-4 sm:space-y-0 flex-col sm:flex-row items-center">
-        <input
-          type="text"
-          placeholder="Trage deine E-Mail ein."
-          {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
-          className="border-2 rounded-lg h-12 w-72 text-center"
-        />
+    <form onSubmit={handleSubmit(onSubmit)} className="sm:space-x-2 flex space-y-4 sm:space-y-0 flex-col sm:flex-row items-center">
 
-        <button
-          type="submit"
-          className=" rounded-lg bg-[#234e70] text-white h-12 w-36"
-        >
-          Probiere es aus
-        </button>
-      </form>
-    </div>
+      <input {...register("email", { required: true, pattern: /^\S+@\S+$/i })} placeholder="Trage deine E-Mail ein." className="border-2 rounded-lg h-12 w-72 text-center"></input>
+
+      <button className="rounded-lg bg-[#234e70] text-white h-12 w-36" role="submit">{isSubmitting ? "Submitting" : "Submit"}</button>
+      {successMessage && <p>{successMessage}</p>}
+    </form>
   );
 }
