@@ -22,7 +22,7 @@ export default function MForm2() {
 
         <button
           type="submit"
-          className=" rounded-lg bg-[#43998e] text-white h-12 w-36"
+          className=" rounded-lg bg-[#234e70] text-white h-12 w-36"
         >
           Probiere es aus
         </button>
