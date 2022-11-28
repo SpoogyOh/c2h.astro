@@ -5,24 +5,32 @@ const items = [
     titel: "Co-Founder",
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
-      "lorem ipsum lorem ipsum lorem ipusim loasfasfast lorem ipsum lorem ipusim loasfasfastwawvs lorem ipsum lorem ipusim loasfasfastwawvs",
-    foto: "/daniel.webp",
+      "Schon während meines Studiums der Rechtswissenschaften habe ich an das Potential von der Digitalisierung im Rechtswesen geglaubt. Als Sieger des Legal Hackathon der Uni Wien wurde mir auch bewusst, dass meine professionelle Laufbahn sich um Legal Tech drehen wird. Nun ist der Moment gekommen, wo ich mit Hilfe von Künstlicher Intelligenz ein bisschen Gerechtigkeit in die Arbeitswelt bringen kann.",
+    foto: "/daniel.png",
   },
   {
-    name: "Daniel Opiola",
+    name: "Wanda Häusler",
     titel: "Co-Founder",
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
-      "lorem ipsum lorem ipsum lorem ipusim loasfasfast lorem ipsum lorem ipusim loasfasfastwawvs lorem ipsum lorem ipusim loasfasfastwawvs",
-    foto: "/jan.webp",
+      "Ich bin Studentin der Rechtswissenschaften an der Universität Wien und engagiere mich ehrenamtlich in dem gemeinnützigen Verein Legal Literacy Project Wien. Mein Ziel ist, Recht für alle Menschen leicht verständlich zu machen. Mit unserem Projekt wollen wir Verträge vereinfachen und auf problematische Klauseln aufmerksam machen, damit du deine Rechte wahrnehmen kannst!",
+    foto: "/wanda.png",
   },
   {
-    name: "Daniel Opiola",
+    name: "Jan Weinreich",
     titel: "Co-Founder",
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
-      "lorem ipsum lorem ipsum lorem ipusim loasfasfast lorem ipsum lorem ipusim loasfasfastwawvs lorem ipsum lorem ipusim loasfasfastwawvs",
-    foto: "/morten.webp",
+      "Ich bin Doktorand im Bereich AI an der Uni Wien und bin fasziniert von den geradezu unbegrenzten Möglichkeiten neuer Technologien. Mein Ziel ist es, neue AI Technologien in kurzer Zeit in unsere Produkte zu integrieren. AI ist gerade dabei, unser Leben zu verändern und wir wollen es dazu nutzen, Ordnung in deine Verträge zu bringen!",
+    foto: "/jan.png",
+  },
+  {
+    name: "Morten Giese",
+    titel: "Co-Founder",
+    linkedin: "https://www.linkedin.com/in/daniel-opiola/",
+    description:
+      "Ich bin Physiker mit Masterabschluss am Max-Planck-Institut für Astrophysik und habe Berufserfahrung in Finanzen und IT. Meine Motivation ist, künstliche Intelligenz auch für beruflich Selbstständige nutzbarer zu machen. Mit contract2human befreien wir dich von deinen juristischen Sorgen und helfen dir dabei, dich auf das Wesentliche zu konzentrieren.",
+    foto: "/morten.png",
   },
   
 ];
@@ -34,13 +42,13 @@ const items = [
   </h1>
 
   <div
-    class="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-4 mt-12"
+    class="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-4 mt-12 mx-4"
   >
     {
       items.map((item) => (
-        <div class="flex flex-col text-start">
-          <div class="w-24 h-24 mb-4">
-            <img src={item.foto} class="rounded-lg object-contain" />
+        <div class="flex flex-col text-start rounded-lg border-2 p-4">
+          <div class="">
+            <img src={item.foto} class="w-48 h-48" />
           </div>
           <div class="">
             <p class="">{item.name}</p>
