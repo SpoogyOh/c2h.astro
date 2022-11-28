@@ -2,15 +2,15 @@
 const items = [
   {
     name: "Daniel Opiola",
-    titel: "Co-Founder",
+    titel: "Legal Tech",
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
-      "Schon während meines Studiums der Rechtswissenschaften habe ich an das Potential von der Digitalisierung im Rechtswesen geglaubt. Als Sieger des Legal Hackathon der Uni Wien wurde mir auch bewusst, dass meine professionelle Laufbahn sich um Legal Tech drehen wird. Nun ist der Moment gekommen, wo ich mit Hilfe von Künstlicher Intelligenz ein bisschen Gerechtigkeit in die Arbeitswelt bringen kann.",
+      "Schon während meines Studiums der Rechtswissenschaften habe ich an das Potential von der Digitalisierung im Rechtswesen geglaubt. Als Sieger des Legal Hackathons der Uni Wien wurde mir auch bewusst, dass meine professionelle Laufbahn sich um Legal Tech drehen wird. Nun ist der Moment gekommen, wo ich mit Hilfe von Künstlicher Intelligenz ein bisschen Gerechtigkeit in die Arbeitswelt bringen kann.",
     foto: "/daniel.png",
   },
   {
     name: "Wanda Häusler",
-    titel: "Co-Founder",
+    titel: "Legal Literacy",
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
       "Ich bin Studentin der Rechtswissenschaften an der Universität Wien und engagiere mich ehrenamtlich in dem gemeinnützigen Verein Legal Literacy Project Wien. Mein Ziel ist, Recht für alle Menschen leicht verständlich zu machen. Mit unserem Projekt wollen wir Verträge vereinfachen und auf problematische Klauseln aufmerksam machen, damit du deine Rechte wahrnehmen kannst!",
@@ -18,7 +18,7 @@ const items = [
   },
   {
     name: "Jan Weinreich",
-    titel: "Co-Founder",
+    titel: "Machine Learning",
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
       "Ich bin Doktorand im Bereich AI an der Uni Wien und bin fasziniert von den geradezu unbegrenzten Möglichkeiten neuer Technologien. Mein Ziel ist es, neue AI Technologien in kurzer Zeit in unsere Produkte zu integrieren. AI ist gerade dabei, unser Leben zu verändern und wir wollen es dazu nutzen, Ordnung in deine Verträge zu bringen!",
@@ -26,18 +26,17 @@ const items = [
   },
   {
     name: "Morten Giese",
-    titel: "Co-Founder",
+    titel: "Data Science",
     linkedin: "https://www.linkedin.com/in/daniel-opiola/",
     description:
       "Ich bin Physiker mit Masterabschluss am Max-Planck-Institut für Astrophysik und habe Berufserfahrung in Finanzen und IT. Meine Motivation ist, künstliche Intelligenz auch für beruflich Selbstständige nutzbarer zu machen. Mit contract2human befreien wir dich von deinen juristischen Sorgen und helfen dir dabei, dich auf das Wesentliche zu konzentrieren.",
     foto: "/morten.png",
   },
-  
 ];
 ---
 
 <div class="team-tile">
-  <h1 id="team" class="font-bold text-4xl mt-20 sm:text-6xl tracking-wide ">
+  <h1 id="team" class="font-bold text-4xl mt-20 sm:text-6xl tracking-wide">
     Das Team
   </h1>
 
@@ -47,28 +46,31 @@ const items = [
     {
       items.map((item) => (
         <div class="flex flex-col text-start rounded-lg border-2 p-4">
-          <div class="">
-            <img src={item.foto} class="w-48 h-48" />
-          </div>
-          <div class="">
-            <p class="">{item.name}</p>
-            <div class="flex space-x-2 my-2">
-              <div class="flex rounded-xl bg-[#234e70] place-items-center">
-                <p class="px-2 text-white">{item.titel}</p>
+          <div class="flex flex-row">
+            <div class="basis-1/3">
+              <img src={item.foto} class="w-24 h-24 mb-2" />
+            </div>
+            <div class="flex flex-col basis-2/3 ">
+              <p class="basis-1/3"></p>
+              <p class="basis-1/3 text-start text-xl">{item.name}</p>
+              <div class="flex space-x-2 my-2">
+                <div class="flex rounded-xl bg-[#234e70] place-items-center">
+                  <p class="px-2 text-white">{item.titel}</p>
+                </div>
+                <a href={item.linkedin} target="_blank">
+                  <svg width="32" height="32" viewBox="0 0 24 24">
+                    <path
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838Zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388Zm-5.5 10.403h3.208V9.25H4.208v10.54ZM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
               </div>
-              <a href={item.linkedin} target="_blank">
-                <svg width="32" height="32" viewBox="0 0 24 24">
-                  <path
-                    fill="#000000"
-                    fill-rule="evenodd"
-                    d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838Zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388Zm-5.5 10.403h3.208V9.25H4.208v10.54ZM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
             </div>
           </div>
-          <span class="max-w-[40ch]">{item.description}</span>
+          <span class=" mt-4 text-left ">{item.description}</span>
         </div>
       ))
     }
@@ -95,7 +97,6 @@ const items = [
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
 
   h2 {
