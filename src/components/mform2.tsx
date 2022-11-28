@@ -6,7 +6,7 @@ export default function MForm() {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting },
+    formState: { isSubmitting, errors },
   } = useForm();
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -28,6 +28,7 @@ export default function MForm() {
 
       <button className="rounded-lg bg-[#234e70] text-white h-12 w-36" role="submit">{isSubmitting ? "Submitting" : "Submit"}</button>
       {successMessage && <p>{successMessage}</p>}
+      {errors.email && <p>Bitte gib eine gültige E-Mail Adresse ein.</p>}
     </form>
   );
 }
