@@ -17,7 +17,7 @@ export const MobileHeader = () => {
 
   return (
     <div className="flex flex-row items-center">
-       <a href="https://8156aac45b7166c9.gradio.app" className="hover:text-[#fbf8be] border-[#fbf8be] border-2 rounded-lg px-4 py-2 ">Demo</a>
+       <a href="https://ea418805fd79c84b.gradio.app/" className="hover:text-[#fbf8be] border-[#fbf8be] border-2 rounded-lg px-4 py-2 ">Demo</a>
       <div className="my-2 px-2">
         <button onClick={handleNav}>
           <svg
