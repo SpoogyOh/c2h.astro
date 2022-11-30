@@ -10,10 +10,6 @@ import { MobileHeader } from "./header";
     <img src="/logo.png" class="logoblack w-24 m-4" />
   </div>
 
-  <div class=" demo hidden sm:hidden">
-    <a href="https://8156aac45b7166c9.gradio.app" class="hover:text-[#fbf8be]">Demo</a>
-  </div>
-
   <div class="hidden md:flex">
     <ul>
       <li class="space-x-6 mx-4">
@@ -49,9 +45,7 @@ import { MobileHeader } from "./header";
       document.querySelector(".navbar").classList.remove("text-black");
       document.querySelector(".logowhite").classList.remove("hidden");
       document.querySelector(".logoblack").classList.add("hidden");
-      document.querySelector(".demo").classList.add("border-[#fbf8be]", "border-2", "rounded-lg", "px-4", "py-2" ,"text-[#fbf8be]", );
-      document.querySelector(".demo").classList.remove("hidden");
-      
+    
     }}
 
     window.addEventListener("scroll", colorchange);
