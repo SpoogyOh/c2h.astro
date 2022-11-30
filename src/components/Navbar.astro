@@ -10,7 +10,7 @@ import { MobileHeader } from "./header";
     <img src="/logo.png" class="logoblack w-24 m-4" />
   </div>
 
-  <div class="demo hidden">
+  <div class=" demo hidden sm:hidden">
     <a href="https://8156aac45b7166c9.gradio.app" class="hover:text-[#fbf8be]">Demo</a>
   </div>
 
@@ -22,6 +22,7 @@ import { MobileHeader } from "./header";
         <a href="/#waitinglist" class="hover:text-[#fbf8be]">Probier es aus</a>
         <a href="/#team" class="hover:text-[#fbf8be]">Das Team</a>
         <a href="/#footer" class="hover:text-[#fbf8be]">Kontakt</a>
+        <a href="https://8156aac45b7166c9.gradio.app" class="hover:text-[#fbf8be] border-[#fbf8be] border-2 rounded-lg px-4 py-2">Demo</a>
       </li>
     </ul>
   </div>
@@ -48,7 +49,7 @@ import { MobileHeader } from "./header";
       document.querySelector(".navbar").classList.remove("text-black");
       document.querySelector(".logowhite").classList.remove("hidden");
       document.querySelector(".logoblack").classList.add("hidden");
-      document.querySelector(".demo").classList.add("border-[#fbf8be]", "border-2", "rounded-lg", "p-4" ,"text-[#fbf8be]");
+      document.querySelector(".demo").classList.add("border-[#fbf8be]", "border-2", "rounded-lg", "px-4", "py-2" ,"text-[#fbf8be]", );
       document.querySelector(".demo").classList.remove("hidden");
       
     }}
